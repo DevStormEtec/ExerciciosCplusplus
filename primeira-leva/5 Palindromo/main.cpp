@@ -1,6 +1,10 @@
 #include <iostream>
 #include <string>
 
+/* Verificador de Palíndromo.
+Esse programa em C++ le uma palavra digitada pelo usuário, inverte seus caracteres e compara com a original. Se forem iguais, informa que é palíndromo, caso contrário, não é.
+Ele repete o processo enquanto o usuário desejar. */
+
 int main(int argc, char** argv) {
     std::string palavra, invertida, repeticao;
     repeticao = "s";
