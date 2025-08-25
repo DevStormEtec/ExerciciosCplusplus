@@ -1,6 +1,7 @@
 #include <iostream>
 
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+/* Calculadora de Potencia.
+Esse Programa de C++ le uma base e um expoente informados pelo usuário. Após isso ele calcula a potência por multiplicações repetidas p/ exibir o resultado  */
 
 int main(int argc, char** argv) {
 	int base, expoente, resultado = 1;
