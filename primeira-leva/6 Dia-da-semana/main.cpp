@@ -1,6 +1,8 @@
 #include <iostream>
 
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+/* Conversor de Número para Dia da Semana.
+Esse programa em C++ le um número digitado pelo usuário, calcula o resto da divisão por 7 e,
+a partir disso, ele exibe o dia da semana correspondente. */
 
 int main(int argc, char** argv) {
 	int numero, dia;
