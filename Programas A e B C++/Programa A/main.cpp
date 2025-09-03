@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+/* Exercicio finalizado por Thiago Maia Coraini e Laura cristina gonçalves da cruz */
 
 int main(int argc, char** argv) {
 	
