@@ -3,7 +3,11 @@
 #include <string>
 #include <algorithm>
 
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+/* 
+Termino do exercicio feito por Otavio Giovanelli Biazzi e Pedro Henrique Miranda
+Atividade: Programa B
+*/
 
 int getId(std::vector<std::string> &nomes, const std::string &s) {
     for (int i = 0; i < (int)nomes.size(); ++i) {
