@@ -92,7 +92,6 @@ int main(int argc, char** argv) {
     "Arvore"
 	};
 	char* palavraAleatoria = palavras[numale];
-	std::cout << palavraAleatoria;
 	//inicio jogo
 	std::cout << "BEM VINDO AO JOGO DA FORCA!\n";
 	estagioforca = 0;
