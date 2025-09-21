@@ -79,12 +79,21 @@ int main(int argc, char** argv) {
 	//faz a modificação para ficar diferente
 	std::srand(time(0));
 	int numale, estagioforca;
+
 	
 	//gera o numero alatório da palavra
 	numale = aleatorio();
-
+	
+	//pega uma palavra aleatória
+	char palavras[10][30] = {
+    "Bolsonaro",
+    "Tabua",
+    "Planeta",
+    "Arvore"
+	};
+	std::cout << palavras[numale];
 	//inicio jogo
-	std::cout << "BEM VINDO AO JOGO DA FORCA!!!!!!!!!!\n";
+	std::cout << "BEM VINDO AO JOGO DA FORCA!\n";
 	estagioforca = 0;
 	impimiforca(estagioforca); //imprime a forca
 	return 0;
