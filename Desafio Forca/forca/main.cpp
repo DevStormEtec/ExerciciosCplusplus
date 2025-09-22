@@ -78,7 +78,7 @@ void impimiforca(int n){
 
 
 int main(int argc, char** argv) {
-	//faz a modificaçao para ficar diferente
+	//faz a modificaÃ§ao para ficar diferente
 	std::srand(time(0));
 	int numale, estagioforca;
 
@@ -110,6 +110,12 @@ int main(int argc, char** argv) {
     int tamanho = 0;
     while (palavraAleatoria[tamanho] != '\0') tamanho++;
     
+	// Sistema para salvar o progresso
+    char progresso[30];
+    for (int i = 0; i < tamanho; i++) {
+        progresso[i] = '_';
+    }
+
 	//inicio jogo
 	estagioforca = 0;
 	impimiforca(estagioforca); //imprime a forca
