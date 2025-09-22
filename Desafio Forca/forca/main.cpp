@@ -12,7 +12,7 @@ int aleatorio(){
 }
 
 void impimiforca(int n){
-	system("cls); //limpa a tela
+	system("cls"); //limpa a tela
 	std::cout << "=== JOGO DA FORCA ===\n";
 	//estágio 0
 	if(n == 0){
