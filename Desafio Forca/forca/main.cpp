@@ -11,17 +11,17 @@ int aleatorio(){
 	
 }
 
-void impimiforca(int n){
+void imprimeForca(int n){
 	system("cls"); //limpa a tela
 	std::cout << "=== JOGO DA FORCA ===\n";
 	//estagio 0
 	if(n == 0){
-		std::cout <<  " _______\n";
-		std::cout << "|/      \n";
-		std::cout << "|       \n";
-		std::cout << "|       \n";
-		std::cout << "|       \n";
-		std::cout << "|       \n";
+	std::cout <<  " _______\n";
+	std::cout << "|/      \n";
+	std::cout << "|       \n";
+	std::cout << "|       \n";
+	std::cout << "|       \n";
+	std::cout << "|       \n";
 	}
 	//estagio 1
 	if(n == 1){
@@ -74,9 +74,6 @@ void impimiforca(int n){
 	}	
 }
 
-
-
-
 int main(int argc, char** argv) {
 	//faz a modificaçao para ficar diferente
 	std::srand(time(0));
@@ -104,11 +101,11 @@ int main(int argc, char** argv) {
 		"ARTES",
 		"LOMBADA"
 	};
-	char* palavraAleatoria = palavras[numale];
+	char* palavraEscolhida = palavras[numale];
 	
 	// Descobre tamanho da palavra
     int tamanho = 0;
-    while (palavraAleatoria[tamanho] != '\0') tamanho++;
+    while (palavraEscolhida[tamanho] != '\0') tamanho++;
     
 	// Sistema para salvar o progresso
     char progresso[30];
@@ -150,9 +147,39 @@ int main(int argc, char** argv) {
 	// Salva a letra chutada
         letrasChutadas[qtdLetras] = chute;
         qtdLetras++;
+		
+	// Verifica vitória
+        bool venceu = true;
+        for (int i = 0; i < tamanho; i++) {
+            if (progresso[i] == '_') {
+                venceu = false;
+                break;
+            }
+        }
+        if (venceu) {
+            std::cout << "\nParabens! Voce acertou a palavra: " << palavraEscolhida << "\n";
+            break;
+        }
 	
-	//inicio jogo
-	estagioforca = 0;
-	impimiforca(estagioforca); //imprime a forca
-	return 0;
+	// Verifica se a letra existe
+        bool achou = false;
+        for (int i = 0; i < tamanho; i++) {
+            if (palavraEscolhida[i] == chute) { 
+                progresso[i] = palavraEscolhida[i];
+                achou = true;
+            }
+        }
+
+        if (!achou) {
+            erros++;  // aumenta erros
+        }
+
+        if (erros > maxErros) {
+            imprimeForca(maxErros);
+            std::cout << "\nVoce perdeu! A palavra era: " << palavraEscolhida << "\n";
+            break;
+        }
+    }
+
+    return 0;
 }
