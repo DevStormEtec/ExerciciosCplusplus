@@ -14,7 +14,7 @@ int aleatorio(){
 void impimiforca(int n){
 	system("cls"); //limpa a tela
 	std::cout << "=== JOGO DA FORCA ===\n";
-	//estágio 0
+	//estagio 0
 	if(n == 0){
 		std::cout <<  " _______\n";
 		std::cout << "|/      \n";
@@ -23,7 +23,7 @@ void impimiforca(int n){
 		std::cout << "|       \n";
 		std::cout << "|       \n";
 	}
-	//estágio 1
+	//estagio 1
 	if(n == 1){
 	std::cout <<  " _______\n";
 	std::cout << "|/      |\n";
@@ -33,7 +33,7 @@ void impimiforca(int n){
 	std::cout << "|       \n";
 	}
 	
-	//estágio 2
+	//estagio 2
 	if(n == 2){
 	std::cout <<  " _______\n";
 	std::cout << "|/      |\n";
@@ -43,7 +43,7 @@ void impimiforca(int n){
 	std::cout << "|       \n";
 	}
 	
-	//estágio 3
+	//estagio 3
 	if(n == 3){
 	std::cout <<  " _______\n";
 	std::cout << "|/      |\n";
@@ -53,7 +53,7 @@ void impimiforca(int n){
 	std::cout << "|       \n";
 	}
 	
-	//estágio 4
+	//estagio 4
 	if(n == 4){
 	std::cout <<  " _______\n";
 	std::cout << "|/      |\n";
@@ -63,7 +63,7 @@ void impimiforca(int n){
 	std::cout << "|      /  \n";
 	}
 	
-	//estágio 5
+	//estagio 5
 	if(n == 5){
 	std::cout <<  " _______\n";
 	std::cout << "|/      |\n";
@@ -78,14 +78,14 @@ void impimiforca(int n){
 
 
 int main(int argc, char** argv) {
-	//faz a modificação para ficar diferente
+	//faz a modifica�ao para ficar diferente
 	std::srand(time(0));
 	int numale, estagioforca;
 
-	//gera o numero alatório da palavra
+	//gera o numero aleatorio da palavra
 	numale = aleatorio();
 	
-	//pega uma palavra aleatória
+	//pega uma palavra aleatoria
 	char palavras[16][30] = {
      	"MARTELO",
 		"TABUA",
@@ -105,6 +105,11 @@ int main(int argc, char** argv) {
 		"LOMBADA"
 	};
 	char* palavraAleatoria = palavras[numale];
+	
+	// Descobre tamanho da palavra
+    int tamanho = 0;
+    while (palavraAleatoria[tamanho] != '\0') tamanho++;
+    
 	//inicio jogo
 	estagioforca = 0;
 	impimiforca(estagioforca); //imprime a forca
