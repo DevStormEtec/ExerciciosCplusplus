@@ -3,6 +3,7 @@
 #include <cstdlib>
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
+/* Desenvolvido por Otávio Giovanelli Biazzi, Pedro Henrique Miranda, Laura Cristina Gonçalves da Cruz e  */
 
 int aleatorio(){
 	int n = std::rand()%16;
