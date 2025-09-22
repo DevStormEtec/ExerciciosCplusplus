@@ -116,6 +116,11 @@ int main(int argc, char** argv) {
         progresso[i] = '_';
     }
 
+	 // Pergunta letra
+    char chute;
+    std::cout << "Digite uma letra com CAPSLOCK: ";
+    std::cin >> chute;
+
 	//inicio jogo
 	estagioforca = 0;
 	impimiforca(estagioforca); //imprime a forca
