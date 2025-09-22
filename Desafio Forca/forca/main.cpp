@@ -6,13 +6,15 @@
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int aleatorio(){
-	int n = std::rand()%6;
+	int n = std::rand()%16;
 	return n;
 	
 }
 
 void impimiforca(int n){
-	//estágio 0
+	system("cls); //limpa a tela
+	std::cout << "=== JOGO DA FORCA ===\n";
+	//estÃ¡gio 0
 	if(n == 0){
 		std::cout <<  " _______\n";
 		std::cout << "|/      \n";
@@ -21,7 +23,7 @@ void impimiforca(int n){
 		std::cout << "|       \n";
 		std::cout << "|       \n";
 	}
-	//estágio 1
+	//estÃ¡gio 1
 	if(n == 1){
 	std::cout <<  " _______\n";
 	std::cout << "|/      |\n";
@@ -31,7 +33,7 @@ void impimiforca(int n){
 	std::cout << "|       \n";
 	}
 	
-	//estágio 2
+	//estÃ¡gio 2
 	if(n == 2){
 	std::cout <<  " _______\n";
 	std::cout << "|/      |\n";
@@ -41,7 +43,7 @@ void impimiforca(int n){
 	std::cout << "|       \n";
 	}
 	
-	//estágio 3
+	//estÃ¡gio 3
 	if(n == 3){
 	std::cout <<  " _______\n";
 	std::cout << "|/      |\n";
@@ -51,7 +53,7 @@ void impimiforca(int n){
 	std::cout << "|       \n";
 	}
 	
-	//estágio 4
+	//estÃ¡gio 4
 	if(n == 4){
 	std::cout <<  " _______\n";
 	std::cout << "|/      |\n";
@@ -61,7 +63,7 @@ void impimiforca(int n){
 	std::cout << "|      /  \n";
 	}
 	
-	//estágio 5
+	//estÃ¡gio 5
 	if(n == 5){
 	std::cout <<  " _______\n";
 	std::cout << "|/      |\n";
@@ -76,24 +78,34 @@ void impimiforca(int n){
 
 
 int main(int argc, char** argv) {
-	//faz a modificação para ficar diferente
+	//faz a modificaÃ§Ã£o para ficar diferente
 	std::srand(time(0));
 	int numale, estagioforca;
 
-	
-	//gera o numero alatório da palavra
+	//gera o numero alatÃ³rio da palavra
 	numale = aleatorio();
 	
-	//pega uma palavra aleatória
-	char palavras[10][30] = {
-    "Bolsonaro",
-    "Tabua",
-    "Planeta",
-    "Arvore"
+	//pega uma palavra aleatÃ³ria
+	char palavras[16][30] = {
+     	"MARTELO",
+		"TABUA",
+		"PLANETA",
+		"ARVORE",
+		"TERRA",
+		"PONTE",
+        "ABERTURA",
+		"HIPOPOTAMO",
+		"PAREDE",
+		"HIDROMASSAGEM",
+		"OLHO",
+        "MOSCA",
+		"ILHA",
+		"LAMPADA",
+		"ARTES",
+		"LOMBADA"
 	};
 	char* palavraAleatoria = palavras[numale];
 	//inicio jogo
-	std::cout << "BEM VINDO AO JOGO DA FORCA!\n";
 	estagioforca = 0;
 	impimiforca(estagioforca); //imprime a forca
 	return 0;
