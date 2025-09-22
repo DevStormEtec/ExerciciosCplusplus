@@ -2,13 +2,12 @@
 #include <ctime>
 #include <cstdlib>
 
-
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int aleatorio(){
 	int n = std::rand()%16;
 	return n;
-	
+
 }
 
 void imprimeForca(int n){
