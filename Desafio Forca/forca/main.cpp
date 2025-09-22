@@ -115,12 +115,42 @@ int main(int argc, char** argv) {
     for (int i = 0; i < tamanho; i++) {
         progresso[i] = '_';
     }
+	
+	int erros = 0;
+    const int maxErros = 5;
+	
+    // Sistema para guardar letras chutadas
+    char letrasChutadas[26]; // maximo de letras
+    int qtdLetras = 0;
 
-	 // Pergunta letra
+    // Loop
+    while (erros <= maxErros) {
+        imprimeForca(erros);
+
+        std::cout << "\nPalavra: ";
+        for (int i = 0; i < tamanho; i++) {
+            std::cout << progresso[i] << " ";
+        }
+        std::cout << "\n";
+
+        // Mostra letras já chutadas
+        if(qtdLetras > 0){
+            std::cout << "Letras chutadas: ";
+            for(int i=0; i<qtdLetras; i++){
+                std::cout << letrasChutadas[i] << " ";
+            }
+            std::cout << "\n";
+        }
+
+	// Pergunta letra
     char chute;
     std::cout << "Digite uma letra com CAPSLOCK: ";
     std::cin >> chute;
 
+	// Salva a letra chutada
+        letrasChutadas[qtdLetras] = chute;
+        qtdLetras++;
+	
 	//inicio jogo
 	estagioforca = 0;
 	impimiforca(estagioforca); //imprime a forca
